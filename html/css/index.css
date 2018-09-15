@@ -1,0 +1,33 @@
+@font-face {
+	font-family: 'Graphik'; /*a name to be used later*/
+  src: url('../fonts/Graphik-Light.ttf'); /*URL to font*/
+}
+.appcontainer{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+.hsection{
+  float: left;
+  /*width: 33.33333%;*/
+  width: 34.322222229%;
+  margin-left: -0.999999999%;
+  height: 100%;
+	cursor: pointer;
+}
+.hsection .irorsection{
+  height: 100%;
+}
+.hsection .sectionlabel{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 60%;
+  text-align: center;
+  font-family:'Graphik', sans;
+  font-size: 4em;
+  line-height: 2.6em;
+  color: white;
+}

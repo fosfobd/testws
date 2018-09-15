@@ -1,0 +1,22 @@
+{
+  "name": "simpleWS",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ec2-user@fosfo.mx:/opt/git/fosfo/skeletons/simpleWS.git"
+  },
+  "author": "Pablo Balderas",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "nodemon": "^1.17.5",
+    "path": "^0.12.7"
+  }
+}
