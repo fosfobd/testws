@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh 'npm --version'
       }
-    },
+    }
     stage('deploy') {
       steps {
         npm start
