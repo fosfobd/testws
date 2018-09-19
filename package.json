@@ -6,10 +6,6 @@
   "scripts": {
     "start": "nodemon index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "ec2-user@fosfo.mx:/opt/git/fosfo/skeletons/simpleWS.git"
-  },
   "author": "Pablo Balderas",
   "license": "ISC",
   "dependencies": {
