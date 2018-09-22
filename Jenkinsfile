@@ -7,6 +7,10 @@ pipeline {
 
   agent any
   
+  tools {
+    nodejs "node"
+  }
+
   stages {
     stage('GitHub Clone') {
       steps {
