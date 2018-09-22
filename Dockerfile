@@ -3,12 +3,11 @@ FROM node:8-alpine
 RUN apk --no-cache add \
   bash
 
-WORKDIR /code
+WORKDIR /app
 
 EXPOSE 3080
 
-COPY ./package.json .
-
+COPY ./package.json /app/
 RUN npm install
 
 ENTRYPOINT npm run start

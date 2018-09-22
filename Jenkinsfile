@@ -8,19 +8,24 @@ pipeline {
   agent any
   
   stages {
-    stage('github') {
+    stage('GitHub Clone') {
       steps {
         git 'https://github.com/fosfobd/testws'
       }
     }
-    stage('build') {
+    stage('Nodejs build') {
+      steps {
+        sh 'npm install'
+      }
+    }
+    stage('Docker build') {
       steps {
         script {
           dockerImage = docker.build registry + ":$BUILD_NUMBER"
         }
       }
     }
-    stage('publish') {
+    stage('Docker push') {
       steps {
         script {
           docker.withRegistry( '', registryCredential ) {
