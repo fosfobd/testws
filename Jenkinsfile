@@ -2,6 +2,7 @@ pipeline {
   environment {
     registry = "fosfo/demo"
     registryCredential = "dockerhub"
+    dockerImage = ''
   }
 
   agent any
@@ -15,7 +16,16 @@ pipeline {
     stage('build') {
       steps {
         script {
-          docker.build registry + ":$BUILD_NUMBER"
+          dockerImage = docker.build registry + ":$BUILD_NUMBER"
+        }
+      }
+    }
+    stage('publish') {
+      steps {
+        script {
+          docker.withRegistry( '', registryCredential ) {
+            dockerImage.push()
+          }  
         }
       }
     }
