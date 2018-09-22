@@ -6,5 +6,10 @@ pipeline {
         sh 'npm --version'
       }
     }
+    stage('publish') {
+      steps {
+        docker push fosfo/demo
+      }
+    }
   }
 }
