@@ -3,7 +3,7 @@ FROM node:8-alpine
 RUN mkdir /app
 WORKDIR /app
 
-COPY package.json /app/
+COPY . /app/
 RUN npm install
 
 EXPOSE 3080
