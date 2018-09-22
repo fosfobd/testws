@@ -7,6 +7,11 @@ pipeline {
   agent any
   
   stages {
+    stage('github') {
+      steps {
+        git 'https://github.com/fosfobd/testws'
+      }
+    }
     stage('build') {
       steps {
         script {
