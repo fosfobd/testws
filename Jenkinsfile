@@ -8,7 +8,7 @@ pipeline {
     }
     stage('publish') {
       steps {
-        docker push fosfo/demo
+        sh 'docker push fosfo/demo'
       }
     }
   }
